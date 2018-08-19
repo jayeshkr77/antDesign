@@ -1,6 +1,6 @@
 import React , {Component} from 'react';
 import {Layout} from 'antd';
-import { Nav } from './header';
+import Nav from './header';
 import Section from './section.js'
 import CardSection from './cardsection';
 import Foot from './footer';

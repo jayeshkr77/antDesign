@@ -20,4 +20,4 @@ class Nav extends Component{
     }
 }
 
-export { Nav };
+export default Nav;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Layout } from 'antd';
-import { Nav } from './header';
+import  Nav from './header.js';
 import Blog from './eachblog';
 import Foot from './footer';
 
