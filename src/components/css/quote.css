@@ -1,0 +1,29 @@
+.quote-wrap{
+    position: absolute;
+    color:white;
+    width:50%;
+    min-width:300px;
+    margin:-35% 20%;
+    padding:40px;
+    padding-left:60px;
+    text-align: justify;
+    background: #001529; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #001529, #302b63, #24243e); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #001529 20%, #24243e); 
+  }
+
+.vert-bar{
+    width:5px;
+    flex: 1;
+    background:pink;
+}
+.speaker{
+    float:right;
+}
+
+@media screen and (max-width: 600px) {
+    .quote-wrap {
+      width:100%;
+      margin-left:0px;
+    }
+  }

@@ -1,0 +1,7 @@
+.particle{
+    width:100%;
+    height:100%;
+    background: #001529; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #001529, #302b63, #24243e); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #001529 60%, #24243e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}

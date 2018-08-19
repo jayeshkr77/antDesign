@@ -1,0 +1,22 @@
+.cardsection{
+    padding:20px;
+}
+
+.read-button{
+    /* border: 1px solid #ffde00 ; */
+    background-color: #ffde00;
+    float:right;
+    /* width: 20px; */
+    /* height: 20px; */
+    color: black;
+    padding: 8px 20px 8px 20px;
+    font-size: 12px;
+    text-decoration-style: solid;
+    box-shadow: 3px 3px 15px 5px #373737;
+    font-family: 'Bitter', serif;
+
+}
+
+.card-shadow{
+    box-shadow: 3px 3px 15px 5px #373737;
+}

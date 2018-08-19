@@ -1,0 +1,30 @@
+.social-media{
+    background: #001529;
+}
+
+.social-text{
+    color: white;
+}
+
+.social{
+    padding: 23px;
+}
+
+.social-para{
+    padding-left: 200px;
+    padding-right: 200px;
+    font-size: 15px; 
+
+}
+
+.social-button{
+    /* border: 1px solid #ffde00 ; */
+    background-color: #ffde00;
+    color: black;
+    padding: 8px 20px 8px 20px;
+    font-size: 12px;
+    text-decoration-style: solid;
+    box-shadow: 3px 3px 15px 5px #373737;
+    font-family: 'Bitter', serif;
+
+}
