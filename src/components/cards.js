@@ -1,29 +1,41 @@
-import React,{Component} from 'react';
-import {Card} from 'antd';
+import React, { Component } from 'react';
+import { Card } from 'antd';
+import Ribbon from './ribbon';
 
 const { Meta } = Card;
 
-class Cards extends Component{
-    render(){
-        return(
-            <Card
-    hoverable
-    // style={{ width: '240px' }}
-    cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" width="240px" height = "240px" />}
-  >
-    <Meta
-      title="Europe Street beat"
-      description="www.instagram.com"
-    />
-    {/* <div className="bookmark">Elecrtrical</div> */}
-     <div id="ribbon" style={{position:'absolute',backgroundColor:'#bb3a34'}}>
-        <div>elecrtrical</div>
-    </div>
-    <div id="ribbon2" style={{position:'absolute',backgroundColor:'#bb3a34'}}>
-        <div>mechanical</div>
-    </div>
-  </Card>
-        );
-    }
+class Cards extends Component {
+  render() {
+    return (
+      <Card
+        hoverable
+        cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" width="240px" height="240px" />}
+      >
+        <Meta
+          title="Europe Street beat"
+          description="www.instagram.com"
+        />
+        <div style = {ribbon1}>
+          <Ribbon genre="electrical" />
+        </div>
+        <div style = {ribbon2} >
+          <Ribbon genre="mechanical" />
+        </div>
+          
+      </Card>
+    );
+  }
 }
 export default Cards;
+
+const ribbon1 = {
+  position:'absolute',
+  top:2,
+  left:-10,
+}
+
+const ribbon2 = {
+  position:'absolute',
+  top:28,
+  left:-10,
+}
