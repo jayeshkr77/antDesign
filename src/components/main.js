@@ -6,7 +6,7 @@ import CardSection from './cardsection';
 import Foot from './footer';
 import SocialTab from './socialmedia';
 
-const number = 4;
+const number = 3;
 
 export default class Main extends Component{
     render(){

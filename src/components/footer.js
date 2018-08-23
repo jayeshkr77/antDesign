@@ -12,6 +12,7 @@ class Foot extends Component {
     render() {
         return (
             <Footer style={{ background: '#001529', color: 'white' }}>
+            <div className="container">
                 <Row>
                     <Col span={8}>
                         <ul style={{ listStyle: 'none', textAlign: 'left', float: 'left' }}>
@@ -24,7 +25,7 @@ class Foot extends Component {
                         {/* <h2 style={{ color: 'white' }}>Connect</h2> */}
                         <ul style={{ listStyle: 'none', textAlign: 'left', float: 'left' }}>
                             <li><h2 style={{ color: 'white' }}>Connect</h2></li>
-                            <li><a href="#" style={styleLinks}><Icon type="facebook" />  Facebook</a></li>
+                            <li><a href="#" style={styleLinks}><Icon type="facebook" style={{color:'blue'}}/>  Facebook</a></li>
                             <li><a href="#" style={styleLinks}><Icon type="instagram" />  Instagram</a></li>
                             <li><a href="#" style={styleLinks}><Icon type="twitter" />  Twitter</a></li>
                             <li><a href="#" style={styleLinks}><Icon type="linkedin" />  Linkedin</a></li>
@@ -37,8 +38,10 @@ class Foot extends Component {
                 <Row>
                     &copy;2018@Vrook
                 </Row>
+            </div>
             </Footer>
         );
     }
 }
 export default Foot;
+

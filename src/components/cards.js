@@ -7,18 +7,22 @@ class Cards extends Component{
     render(){
         return(
             <Card
-                className='card-shadow'
-                hoverable
-                style={{width:'!00%'}}
-                cover={<img alt={this.props.alt} src={this.props.image} />}
-            >
-            <Meta
-                style={{padding:'20px'}}
-                title={this.props.title}
-                description={this.props.description}
-            />
-            <a className="read-button">READ</a>
-            </Card>
+    hoverable
+    // style={{ width: '240px' }}
+    cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" width="240px" height = "240px" />}
+  >
+    <Meta
+      title="Europe Street beat"
+      description="www.instagram.com"
+    />
+    {/* <div className="bookmark">Elecrtrical</div> */}
+     <div id="ribbon" style={{position:'absolute',backgroundColor:'#bb3a34'}}>
+        <div>elecrtrical</div>
+    </div>
+    <div id="ribbon2" style={{position:'absolute',backgroundColor:'#bb3a34'}}>
+        <div>mechanical</div>
+    </div>
+  </Card>
         );
     }
 }

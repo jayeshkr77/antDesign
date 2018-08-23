@@ -1,3 +1,10 @@
+
+/* --ribbon-bg: #bb3a34;
+--ribbon-hl: #e74841;
+--ribbon-w: 40px;
+--ribbon-tail: 10px; */
+
+
 .cardsection{
     padding:20px;
 }
@@ -20,3 +27,88 @@
 .card-shadow{
     box-shadow: 3px 3px 15px 5px #373737;
 }
+
+
+#ribbon {
+    padding:0 0 10px 0;
+    position:absolute;
+    left:-0.55em;
+    top:-0.25em;
+    width:30px;
+    color:transparent;
+}
+#ribbon:hover{
+    color:white;
+    width:70px;
+
+}
+#ribbon div {
+      background:#bb3a34;
+      background: linear-gradient(#e74841 0%, #bb3a34 100%);
+      padding:0.1em 0.1em;
+      text-align:center;
+      text-shadow:-1px -1px 0 rgba(0, 0, 0, 0.5);
+    }
+#ribbon div:after {
+      border-left: 20px solid #bb3a34;
+      border-right: 20px solid #bb3a34;
+      border-bottom: 5px solid transparent;
+      bottom:0;
+      content:'';
+      height: 10px;
+      left:0;
+      position:absolute;
+      width: 0;
+}
+
+
+#ribbon2 {
+    padding:0 0 10px 0;
+    position:absolute;
+    left:-0.55em;
+    top:3.25em;
+    width:90px;
+}
+
+#ribbon2 div {
+    background:#bb3a34;
+    background: linear-gradient(#e74841 0%, #bb3a34 100%);
+    color:#fff;
+    padding:0.5em 0;
+    text-align:center;
+    text-shadow:-1px -1px 0 rgba(0, 0, 0, 0.5);
+  }
+#ribbon2 div:after {
+    border-left: 20px solid #bb3a34;
+    border-right: 20px solid #bb3a34;
+    border-bottom: 5px solid transparent;
+    bottom:0;
+    content:'';
+    height: 0;
+    left:0;
+    position:absolute;
+    margin-top:40px;
+    width: 0;
+}
+
+
+
+/* @ribbon-color: #222;
+@ribbon-height: 225px;
+@ribbon-width: 100px; */
+
+/* 
+.bookmark {
+	background-color: #222;
+	height: 40px;
+	margin: 0 100px;
+	width: 30px;
+}
+.bookmark:after {
+	border-style: solid;
+	border-width: 0 50px 50px 50px; 
+	border-color: #222 #222 transparent #222;
+	content: "";
+	margin-top: 225px;
+	position: absolute;
+} */

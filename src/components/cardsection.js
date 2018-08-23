@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Layout, Row, Col} from 'antd';
+import {Layout, Row, Col, Card} from 'antd';
 import Cards from './cards';
 import './css/cardsection.css';
 
@@ -15,21 +15,37 @@ class CardSection extends Component{
 
 
     render(){
-
-        var count = this.props.number;
-        var cardrender=[];
-
-        while(count){ 
-            cardrender[this.props.number-count]=<Col span={6}><Cards title="jayesh ka photo" description="this  is a description of photo api se ayega" alt="jayesh ka photo lagega"/></Col>;
-            count--;
-        }
-
         return(
-            <Layout className="cardsection">
+            <Layout>
+            <div class="container" style={{marginTop:16}}>
                 <Row gutter={16}>
-                    {cardrender}            
+                <Col span={6}>
+                <Cards />
+                </Col>
+                <Col span={6}>
+                <Cards />
+                </Col>
+                <Col span={6}>
+                <Cards />
+                </Col>
+                <Col span={6}>
+                <Cards />
+                </Col>
+        
                 </Row>
-                
+                <Row>
+                    <Card style={{padding: 0, width:1000, marginLeft:110, height:250, marginTop:16 ,marginBottom:16}}>
+                        <Row>
+                            <Col span={6}  style={{position:'absolute',marginLeft:'-140px'}}>
+                                <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" width="240px" height = "200px" />
+                            </Col>
+                            <Col span={18}>
+                                this is ksdfkj
+                            </Col>
+                        </Row>
+                    </Card>
+                </Row>
+            </div>
             </Layout>  
         );
     }

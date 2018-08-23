@@ -1,11 +1,11 @@
 .quote-wrap{
     position: absolute;
+    display:flex;
     color:white;
     width:50%;
     min-width:300px;
     margin:-35% 20%;
     padding:40px;
-    padding-left:60px;
     text-align: justify;
     background: #001529; /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom, #001529, #302b63, #24243e); /* Chrome 10-25, Safari 5.1-6 */
@@ -13,9 +13,14 @@
   }
 
 .vert-bar{
-    width:5px;
+    width:1px;
     flex: 1;
-    background:pink;
+    height: 13vh;
+    border-right:3px solid pink;
+    margin-right:10px;
+}
+.quote{
+    flex:8;
 }
 .speaker{
     float:right;
@@ -25,5 +30,8 @@
     .quote-wrap {
       width:100%;
       margin-left:0px;
+    }
+    .vert-bar{
+        height:30vh;
     }
   }
