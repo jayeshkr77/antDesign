@@ -1,41 +1,45 @@
-import React, {Component} from 'react';
-import {Layout,Row,Col} from 'antd';
+import React, { Component } from 'react';
+import { Layout } from 'antd';
 import Nav from './header.js';
 import Foot from './footer.js';
-import Mission from './missionvisioncard.js';
-import AboutCards from './aboutSection.js';
+import './css/about.css'
+import Aboutus from './aboutaboutus.js';
+import Weare from './weare.js';
+import Fromthedesk from './fromthedesk.js';
+import OurWork from './ourwork.js';
 
-const {Content} = Layout;
+const { Content } = Layout;
 
-const mission = "Become the largest online platform for innersive learning parctical experiments, simulations and emmersive learning through VR across channels";
-
-class About extends Component{
-    render(){
-        return(
+class About extends Component {
+    render() {
+        return (
             <Layout>
                 <Nav />
-                <Content style={contentcss}>
-                        <Row gutter={16}>
-                            <Col span={17}>
-                                <AboutCards title='' description='I am a simple card. I am good at containing small bits of information'/>
-                            </Col>
-                            <Col span={7}>
-                                <Mission title="Mission" description={mission} />
-                                <Mission title="Vision" description={mission} />
-                            </Col>
-                        </Row>
-                </Content>
+                <div>
+                    <Aboutus />
+                </div>
+                <div className="container">
+                    <Weare />
+                </div>
+                <div>
+                    <Content style={contentcss}>
+                        <Fromthedesk />
+                    </Content>
+                </div>
+                <div className="container">
+                    <OurWork />
+                </div>
                 <Foot />
             </Layout>
-        );      
+        );
     }
 }
 
 export default About;
 
 const contentcss = {
-    width:'90%',
-    margin:'0px auto',
-    marginTop:'100px',
-    
+    width: '90%',
+    margin: '0px auto',
+    marginTop: '100px',
+
 }

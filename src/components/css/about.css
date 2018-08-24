@@ -1,0 +1,33 @@
+.aboutus{
+    position: absolute;
+    color:white;
+    font-size:40px;
+    font-weight: bold;
+    top:50%;
+    left:40%;
+}
+
+.whoweare{
+    text-align: justify;
+    width:85%;
+    min-width:500px;
+    margin:0px auto;
+}
+
+.whoweare div{
+    padding:10px 0px;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("https://s3.amazonaws.com/thinkific-import/114168/jaFn08WvQiWPJycXrtW7_bannr.jpg");
+
+    /* Set a specific height */
+    min-height: 1000px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
