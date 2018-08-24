@@ -19,13 +19,13 @@
     padding: 8px 20px 8px 20px;
     font-size: 12px;
     text-decoration-style: solid;
-    box-shadow: 3px 3px 15px 5px #373737;
+    box-shadow: 2px 5px #546e7a ;
     font-family: 'Bitter', serif;
 
 }
 
 .card-shadow{
-    box-shadow: 3px 3px 15px 5px #373737;
+    box-shadow: 3px 3px 1px 1px #373737;
 }
 
 .ribbon::before{

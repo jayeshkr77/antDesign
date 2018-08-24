@@ -15,7 +15,7 @@ class About extends Component{
             <Layout>
                 <Nav />
                 <Content style={contentcss}>
-                        <Row>
+                        <Row gutter={16}>
                             <Col span={17}>
                                 <AboutCards title='' description='I am a simple card. I am good at containing small bits of information'/>
                             </Col>
@@ -37,6 +37,5 @@ const contentcss = {
     width:'90%',
     margin:'0px auto',
     marginTop:'100px',
-    border:'1px solid blue',
     
 }

@@ -15,7 +15,7 @@ class Nav extends Component {
                         <a href=""><img style={{ float: 'left', marginTop: 12 }} src="https://s3.amazonaws.com/thinkific-import/114168/lRGDunfcQlGiplOHgrog_Final Big Logo.png " height="40px" /></a>
                         <div style={{ float: 'right', paddingTop: 8 }} >
                             <a className="social-button" style={link}>GET STARTED WITH VROOK <i class="fas fa-graduation-cap" style={{ paddingLeft: "5px" }}></i></a>
-                            <a className="social-button" style={socialLink2}>ABOUT US <Icon type="global" style={{ paddingLeft: '5px' }} /></a>
+                            <a href="/about" className="social-button" style={socialLink2}>ABOUT US <Icon type="global" style={{ paddingLeft: '5px' }} /></a>
                         </div>
                     </div>
                 </Menu>
