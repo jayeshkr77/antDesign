@@ -1,0 +1,14 @@
+.login-form {
+    max-width: 300px;
+  }
+  .login-form-forgot {
+    float: right;
+  }
+  .login-form-button {
+    width: 100%;
+  }
+
+  .admin-form{
+      /* background: rgba(255, 255,255, 0.7); */
+      background: #001529;
+  }

@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 // import {Layout} from 'antd';
-import {BrowserRouter, Route} from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
 import Main from './components/main.js';
 import BlogPage from './components/blogmainpage.js';
 import About from './components/about.js';
+import WrappedNormalLoginForm from './components/adminPage';
+import AdminPage from './components/admin';
+import Blogging from './components/blogform';
 
 // const {Header,Footer,Sider,Content} = Layout;
 
@@ -14,9 +17,12 @@ class App extends Component {
       <div className="App">
         <BrowserRouter>
           <div>
-            <Route exact path='/' component={Main}/>
-            <Route exact path='/blog' component={BlogPage}/>
-            <Route exact path='/about' component={About}/>
+            <Route exact path='/' component={Main} />
+            <Route exact path='/blog' component={BlogPage} />
+            <Route exact path='/about' component={About} />
+            <Route exact path='/adminpage' component={AdminPage} />
+            <Route exact path='/blogpost' component={Blogging} />
+            <Route exact path='/admin' component={WrappedNormalLoginForm} />
           </div>
         </BrowserRouter>
       </div>
