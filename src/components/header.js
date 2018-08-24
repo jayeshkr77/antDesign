@@ -12,7 +12,7 @@ class Nav extends Component {
                     mode="horizontal"
                 >
                     <div className="container">
-                        <a href=""><img style={{ float: 'left', marginTop: 12 }} src="https://s3.amazonaws.com/thinkific-import/114168/lRGDunfcQlGiplOHgrog_Final Big Logo.png " height="40px" /></a>
+                        <a href="/"><img style={{ float: 'left', marginTop: 12 }} src="https://s3.amazonaws.com/thinkific-import/114168/lRGDunfcQlGiplOHgrog_Final Big Logo.png " height="40px" /></a>
                         <div style={{ float: 'right', paddingTop: 8 }} >
                             <a className="social-button" style={link}>GET STARTED WITH VROOK <i class="fas fa-graduation-cap" style={{ paddingLeft: "5px" }}></i></a>
                             <a href="/about" className="social-button" style={socialLink2}>ABOUT US <Icon type="global" style={{ paddingLeft: '5px' }} /></a>
@@ -34,7 +34,7 @@ const socialLink2 = {
 };
 
 const link = {
-    marginRight: 56,
+    marginRight: 40,
     color: 'black',
     textDecoration: 'none',
 }
