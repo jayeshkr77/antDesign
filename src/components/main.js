@@ -5,6 +5,7 @@ import Section from './section.js'
 import CardSection from './cardsection';
 import Foot from './footer';
 import SocialTab from './socialmedia';
+import Cform from './contactform';
 
 const number = 3;
 
@@ -17,6 +18,7 @@ export default class Main extends Component{
                 <CardSection number={number}/>
                 <SocialTab />
                 <CardSection number={number}/>
+                <Cform />
                 <Foot />
             </Layout>
         );
