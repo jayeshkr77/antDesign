@@ -6,43 +6,35 @@ const {Meta} = Card;
 class Mission extends Component{
     render(){
         return(
-            <Card
-                className='card-shadow'
-                style={{width:'100%', backgroundColor:'#001529',color:'white',textAlign:'left',marginTop:'10px'}}
-            >
-            <Meta
-                style={{padding:'20px'}}
-            />
-                <div>
-                    {this.props.title}
+            <div style={{backgroundColor:'#001529',color:'white',textAlign:'left',padding:'15px',marginTop:'11px',marginBottom:'20px'}}>
+                <div style={{fontSize:'24px',paddingTop:'10px' ,borderBottom:'1px solid  #ffde00'}}>
+                    <div style={{display:'flex',paddingBottom:'1px'}}>
+                        <div style={{flex:1,paddingTop:'5px'}}><div style={{width:'2px',height:'25px' ,backgroundColor:'pink'}}></div></div>
+                        <div style={{flex:30}}>
+                            {this.props.title}
+                        </div>
+                    </div>
                 </div>
-                <div>
+                <div style={{marginTop:'10px'}}>
                     {this.props.description}
                 </div>
-            </Card>
+            </div>
+            // <Card
+            //     className='card-shadow'
+            //     style={{backgroundColor:'#001529',color:'white',textAlign:'left'}}
+            // >
+            // <Meta
+            //     style={{padding:'15px'}}
+            // />
+            //     <div style={{fontSize:'34px'}}>
+            //         {this.props.title}
+            //     </div>
+            //     <div>
+            //         {this.props.description}
+            //     </div>
+            // </Card>
 
         );
     }
 }
 export default Mission;
-
-
-// const cardcss
-// const heading = {
-//     display:'flex',
-//     width:'100px',
-// }
-// const vertbar = {
-//     flex :'1',
-//     borderRight:'5px solid pink',
-// }
-// const titlestyle = {
-//     flex :'9999',
-//     fontSize:'30px',
-//     fontWeight:'bold',
-// }
-// const title={
-//     fontSize:'20px',
-//     textAlign:'center',
-//     padding:'10px',
-// }
