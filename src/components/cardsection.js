@@ -18,7 +18,7 @@ class CardSection extends Component {
 	render() {
 		return (
 			<Layout>
-				<div class="container" style={{ marginTop: 16 }}>
+				<div class="container" style={{ marginTop: 30 }}>
 					<Row gutter={16}>
 						<Col span={6}>
 							<Cards />
@@ -35,7 +35,7 @@ class CardSection extends Component {
 
 					</Row>
 					<Row>
-						<Card style={{ padding: 0, width: 1000, marginLeft: 110, height: 250, marginTop: 16, marginBottom: 16 }}>
+						<Card style={{ padding: 0, width: 1000, marginLeft: 110, height: 250, marginTop: 30, marginBottom: 30 }}>
 							<Row>
 								<Col span={6} style={{ position: 'absolute', marginLeft: '-140px' }}>
 									<div>
