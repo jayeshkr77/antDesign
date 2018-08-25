@@ -1,5 +1,7 @@
 import React from 'react';
 import { Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import './css/blog.css';
+
 
 export default class Example extends React.Component {
     render() {
@@ -24,13 +26,8 @@ export default class Example extends React.Component {
                             <Input type="textarea" name="text" id="exampleText" />
                         </Col>
                     </FormGroup>
-                    <FormGroup row>
-                        <Label for="exampleFile" sm={3}>Photo</Label>
-                        <Col sm={9}>
-                            <Input type="file" name="file" id="exampleFile" />
-
-                        </Col>
-                    </FormGroup>
+                    <div id="editor-container">
+                    </div>
                     <FormGroup check row>
                         <Col sm={{ size: 9, offset: 3 }}>
                             <Button>Submit</Button>
