@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import {Layout} from 'antd';
 import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
 import Main from './components/main.js';
@@ -8,8 +7,6 @@ import About from './components/about.js';
 import WrappedNormalLoginForm from './components/adminPage';
 import AdminPage from './components/admin';
 import Blogging from './components/blogform';
-
-// const {Header,Footer,Sider,Content} = Layout;
 
 class App extends Component {
   render() {
