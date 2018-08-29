@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Card,Icon} from 'antd';
+import { Card, Icon } from 'antd';
 
 class AboutCards extends Component {
 	render() {
@@ -15,8 +15,8 @@ class AboutCards extends Component {
 						{this.props.title}
 						{this.props.description}
 						<br />
-						<div style={{position:'absolute',bottom:25,left:'90%'}}>
-						<a href="" ><Icon style={{ fontSize: 26, color: '#007BB5', paddingRight: 10 }} type="linkedin" /></a>
+						<div style={{ position: 'absolute', bottom: 25, left: '90%' }}>
+							<a href="" ><Icon style={{ fontSize: 26, color: '#007BB5', paddingRight: 10 }} type="linkedin" /></a>
 						</div>
 					</div>
 				</div>

@@ -22,7 +22,7 @@ class Nav extends Component {
             </Header >
 
         );
-    }
+    } 
 }
 
 export default Nav;

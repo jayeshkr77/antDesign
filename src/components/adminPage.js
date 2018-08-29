@@ -13,16 +13,10 @@ class AdminLoginForm extends Component {
         this.props.form.validateFields((err, values) => {
             if (!err) {
                 const msg = message.loading('Signing in', 0);
-
-
                 axios.post('https://56y1lomy27.execute-api.ap-south-1.amazonaws.com/v1/login1', values)
                     .then((res) => {
                         var userToken = res.data.Token;
-
                         localStorage.setItem('adminToken', userToken);
-
-
-
                         setTimeout(msg)
                     })
                     .catch((error) => {
@@ -30,7 +24,6 @@ class AdminLoginForm extends Component {
                         setTimeout(msg);
                         message.error('Not Found');
                     })
-
             }
         });
     }
@@ -67,7 +60,7 @@ class AdminLoginForm extends Component {
                                 <Checkbox style={{ color: 'white' }}>Remember me</Checkbox>
                             )}
                             {/* <Link to={'/adminpage'}> */}
-                                <Button type="primary" htmlType="submit" className="login-form-button">Log in</Button>
+                            <Button type="primary" htmlType="submit" className="login-form-button">Log in</Button>
                             {/* </Link> */}
                         </FormItem>
                     </Form>

@@ -6,15 +6,15 @@ import './css/blog.css';
 
 
 export default class Example extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props);
-        this.state = {text : ''};
+        this.state = { text: '' };
         this.handleChange = this.handleChange.bind(this);
-      }
-    
-      handleChange(value){
-        this.setState({text:value})
-      }
+    }
+
+    handleChange(value) {
+        this.setState({ text: value })
+    }
     render() {
         return (
             <div className="container" style={{ width: '600px', padding: '30px', margin: '200px auto', border: '1px solid black' }}>
