@@ -2,3 +2,13 @@
     height: 230px;
     padding-bottom: 20px;
   }
+
+  .editor-container {
+    margin: 1rem 4rem;
+  }
+  
+  .editor-container .ql-container {
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+    background: #fefcfc;
+  }

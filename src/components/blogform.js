@@ -19,7 +19,10 @@ export default class Example extends React.Component {
     render() {
         return (
             <div className="container" style={{ width: '90%', padding: '30px', margin: '100px auto' }}>
-                <Form className="container">
+                <Form>
+                    <FormGroup style={{ float: 'right' }}>
+                        <Button>Submit</Button>
+                    </FormGroup>
                     <FormGroup row style={{ marginTop: '20px' }}>
                         <Col sm={12}>
                             <Input type="email" name="email" id="exampleEmail" placeholder="Admin Name" />
@@ -30,22 +33,14 @@ export default class Example extends React.Component {
                             <Input type="text" name="genere" id="exampleText" placeholder="genere" />
                         </Col>
                     </FormGroup>
-                    {/* <FormGroup check row style={{ marginRight: '0px', float: 'right' }}>
-                        <Col>
-                            
-                        </Col>
-                    </FormGroup> */}
-                    <div style={{ marginBottom: '20px' }}>
-                        <FormGroup>
-                            <div id="editor-container">
-                                {/* <ReactQuill value={this.state.text} onChange={this.handleChange}></ReactQuill> */}
-                                <Editor placeholder={'Write something...'} />
-                            </div>
-                        </FormGroup>
-                    </div>
-                    <div style={{ float: 'right', marginTop: 20 }}>
-                        <Button>Submit</Button>
-                    </div>
+                    <FormGroup>
+                        <div id="editor-container">
+                            {/* <ReactQuill value={this.state.text} onChange={this.handleChange}></ReactQuill> */}
+                            <Editor placeholder={'Write something...'} />
+                        </div>
+                    </FormGroup>
+
+
 
                 </Form>
             </div >
