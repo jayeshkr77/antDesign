@@ -31,15 +31,11 @@ export default class Example extends React.Component {
                             <Input type="text" name="genere" id="exampleText" placeholder="genere" />
                         </Col>
                     </FormGroup>
-                    <FormGroup row>
-                        <Label for="exampleText" sm={3}>Blog Content</Label>
-                        <Col sm={9}>
-                            <Input type="textarea" name="text" id="exampleText" />
-                        </Col>
+                    <FormGroup>
+                        <div id="editor-container">
+                            <ReactQuill value={this.state.text} onChange={this.handleChange}></ReactQuill>
+                        </div>
                     </FormGroup>
-                    <div id="editor-container">
-                        <ReactQuill value={this.state.text} onChange={this.handleChange}></ReactQuill>
-                    </div>
                     <FormGroup check row>
                         <Col sm={{ size: 9, offset: 3 }}>
                             <Button>Submit</Button>
