@@ -3,6 +3,7 @@ import { Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import './css/blog.css';
+import Editor from './quilltoolbar';
 
 
 export default class Example extends React.Component {
@@ -17,32 +18,37 @@ export default class Example extends React.Component {
     }
     render() {
         return (
-            <div className="container" style={{ width: '600px', padding: '30px', margin: '200px auto', border: '1px solid black' }}>
-                <Form>
-                    <FormGroup row>
-                        <Label for="exampleText" sm={3}>Name</Label>
-                        <Col sm={9}>
+            <div className="container" style={{ width: '90%', padding: '30px', margin: '100px auto' }}>
+                <Form className="container">
+                    <FormGroup row style={{ marginTop: '20px' }}>
+                        <Col sm={12}>
                             <Input type="email" name="email" id="exampleEmail" placeholder="Admin Name" />
                         </Col>
                     </FormGroup>
                     <FormGroup row>
-                        <Label for="exampleText" sm={3}>Gener</Label>
-                        <Col sm={9}>
+                        <Col sm={12}>
                             <Input type="text" name="genere" id="exampleText" placeholder="genere" />
                         </Col>
                     </FormGroup>
-                    <FormGroup>
-                        <div id="editor-container">
-                            <ReactQuill value={this.state.text} onChange={this.handleChange}></ReactQuill>
-                        </div>
-                    </FormGroup>
-                    <FormGroup check row>
-                        <Col sm={{ size: 9, offset: 3 }}>
-                            <Button>Submit</Button>
+                    {/* <FormGroup check row style={{ marginRight: '0px', float: 'right' }}>
+                        <Col>
+                            
                         </Col>
-                    </FormGroup>
+                    </FormGroup> */}
+                    <div style={{ marginBottom: '20px' }}>
+                        <FormGroup>
+                            <div id="editor-container">
+                                {/* <ReactQuill value={this.state.text} onChange={this.handleChange}></ReactQuill> */}
+                                <Editor placeholder={'Write something...'} />
+                            </div>
+                        </FormGroup>
+                    </div>
+                    <div style={{ float: 'right', marginTop: 20 }}>
+                        <Button>Submit</Button>
+                    </div>
+
                 </Form>
-            </div>
+            </div >
         );
     }
 }
