@@ -19,13 +19,13 @@ export default class Editor extends Component {
         return (
             <div>
                 <ReactQuill
+                    style={{ background: 'white' }}
                     id="editor-container"
-                    theme={this.state.theme}
                     onChange={this.handleChange}
                     value={this.state.editorHtml}
                     modules={Editor.modules}
                     formats={Editor.formats}
-                    bounds={'.app'}
+                    bounds={'.editor-container'}
                     placeholder={this.props.placeholder}
                 />
             </div>
