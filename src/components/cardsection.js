@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 import { Layout, Row, Col, Card } from 'antd';
 import Cards from './cards';
 import './css/cardsection.css';
@@ -21,7 +22,9 @@ class CardSection extends Component {
 				<div class="container" style={{ marginTop: 30 }}>
 					<Row gutter={16}>
 						<Col span={6}>
-							<Cards />
+							<Link to='/blog/123'> 
+								<Cards />
+							</Link>
 						</Col>
 						<Col span={6}>
 							<Cards />

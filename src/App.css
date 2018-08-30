@@ -4,3 +4,71 @@
 .App {
   text-align: center;
 }
+
+.parallax2 {
+  /* The image used */
+  background-image: url("https://s3.amazonaws.com/thinkific-import/114168/jaFn08WvQiWPJycXrtW7_bannr.jpg");
+
+  /* Set a specific height */
+  min-height: 400px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.blogcontent{
+  background:#ddd;
+  min-height:100vh;
+  max-width:90vw;
+  margin:-100px auto;
+  box-shadow: 0px 0px 20px 10px #333;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.blog-genre{
+  position: absolute;
+  height:100px;
+  width:90vw; 
+  margin:-120px 0px;
+}
+.genre{
+  position: relative;
+  top:-20vh;
+  left:40%;
+  color:#333;
+  font-weight: 900;
+  background:#ffde00;
+  width:200px;
+  padding:5px 10px;
+  border-radius: 20px;
+  /* box-shadow: 0px 5px 2px #888; */
+}
+.author-name{
+  position: absolute;
+  color:white;
+}
+.author-image{
+  width:150px;
+  height:150px;
+  border-radius: 50%;
+  background-color: #888;
+}
+.shadow{
+  position: absolute;
+  background-color: #888;
+  opacity:0.2;
+  height:15px;
+  width:100px;
+  border-radius: 50%; 
+  margin:10px 25px;
+  box-shadow: 5px 10px 18px #888;
+}
+.content{
+  width:90vw;
+  height:150px;
+  background:white;
+}
