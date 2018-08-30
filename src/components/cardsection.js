@@ -64,7 +64,6 @@ class CardSection extends Component {
 }
 
 export default CardSection;
-
 const ribbon1 = {
 	position: 'absolute',
 	top: 2,
