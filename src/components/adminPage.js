@@ -2,10 +2,8 @@ import React, { Component } from 'react';
 import { Form, Icon, Input, Button, Checkbox, message } from 'antd';
 import './css/admin.css'
 import axios from 'axios';
-import AdminPage from './admin';
-import Login from './loginPage';
 import Example from './blogform';
-import 'applause-button';
+
 
 
 const FormItem = Form.Item;
