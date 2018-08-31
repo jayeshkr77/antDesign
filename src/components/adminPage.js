@@ -4,6 +4,7 @@ import './css/admin.css'
 import axios from 'axios';
 import AdminPage from './admin';
 import Login from './loginPage';
+import Example from './blogform';
 
 
 const FormItem = Form.Item;
@@ -14,9 +15,20 @@ class AdminLoginForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            authUser: false,
+            authUser: false
+        }
+
+    }
+
+    componentDidMount() {
+        if (localStorage.getItem('adminToken')) {
+            this.setState({
+                authUser: true
+            });
         }
     }
+
+
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
@@ -94,7 +106,10 @@ class AdminLoginForm extends Component {
 
         } else {
             return (
-                <Login />
+                <div>
+                    <Example />
+
+                </div>
             );
         }
     }
