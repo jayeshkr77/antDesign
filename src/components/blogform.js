@@ -1,7 +1,7 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 import { Col, Form, FormGroup, Input } from 'reactstrap';
 import { Button } from 'antd';
-import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import './css/blog.css';
 import Editor from './quilltoolbar';
@@ -13,15 +13,19 @@ export default class Example extends React.Component {
         this.state = { text: '' };
         this.handleChange = this.handleChange.bind(this);
     }
+    logout = (event) => {
+        
+    }
 
     handleChange(value) {
         this.setState({ text: value })
     }
     render() {
+        if (localStorage.getItem('adminToken')){
         return (
             <div>
                 <div style={{ marginTop: 10 }}>
-                    <Button type="primary">Logout</Button>
+                    <Button type="primary" onClick={this.logout}>Logout</Button>
                 </div>
                 <div className="container" style={{ width: '90%', padding: '30px', margin: '100px auto' }}>
                     <Form>
@@ -50,5 +54,9 @@ export default class Example extends React.Component {
                 </div >
             </div>
         );
+    }
+    else{
+        return <Redirect to='/admin' />;
+    }
     }
 }

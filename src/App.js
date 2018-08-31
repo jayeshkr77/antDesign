@@ -7,6 +7,7 @@ import About from './components/about.js';
 import WrappedNormalLoginForm from './components/adminPage';
 import AdminPage from './components/admin';
 import Blogging from './components/blogform';
+import Example from './components/blogform';
 
 class App extends Component {
   render() {
@@ -20,6 +21,7 @@ class App extends Component {
             <Route exact path='/adminpage' component={AdminPage} />
             <Route exact path='/blogpost' component={Blogging} />
             <Route exact path='/admin' component={WrappedNormalLoginForm} />
+            <Route exact path='/admin/dashboard' component={Example} />
           </div>
         </BrowserRouter>
       </div>

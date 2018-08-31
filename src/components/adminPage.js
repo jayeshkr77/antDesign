@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
 import { Form, Icon, Input, Button, Checkbox, message } from 'antd';
 import './css/admin.css'
 import axios from 'axios';
 import Example from './blogform';
 
-
-
 const FormItem = Form.Item;
-
-
 
 class AdminLoginForm extends Component {
     constructor(props) {
@@ -91,12 +88,7 @@ class AdminLoginForm extends Component {
             );
 
         } else {
-            return (
-                <div>
-                    <Example />
-
-                </div>
-            );
+            return <Redirect to='/admin/dashboard'  />;
         }
     }
 }
