@@ -10,11 +10,12 @@ import Editor from './quilltoolbar';
 export default class Example extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { text: '' };
+        this.state = { text: '' ,rerender:false};
         this.handleChange = this.handleChange.bind(this);
     }
     logout = (event) => {
-        
+        localStorage.removeItem('adminToken');
+        this.setState({ rerender:!this.state.rerender });
     }
 
     handleChange(value) {
