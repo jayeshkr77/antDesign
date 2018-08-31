@@ -5,6 +5,7 @@ import axios from 'axios';
 import AdminPage from './admin';
 import Login from './loginPage';
 import Example from './blogform';
+import 'applause-button';
 
 
 const FormItem = Form.Item;
@@ -36,19 +37,6 @@ class AdminLoginForm extends Component {
             console.log(err);
             if (!err) {
                 const msg = message.loading('Signing in', 0);
-                // console.log(values);
-                // axios.post('https://56y1lomy27.execute-api.ap-south-1.amazonaws.com/v1/login1', values)
-                //     .then((res) => {
-                //         var userToken = res.data.Token;
-                //         localStorage.setItem('adminToken', userToken);
-                //         setTimeout(msg)
-                //     })
-                //     .catch((error) => {
-                //         console.log(error)
-                //         setTimeout(msg);
-                //         message.error('Not Found');
-                //     })
-
                 axios({
                     method: 'post',
                     url: 'https://56y1lomy27.execute-api.ap-south-1.amazonaws.com/v1/login1',
@@ -85,14 +73,14 @@ class AdminLoginForm extends Component {
                                 {getFieldDecorator('email', {
                                     rules: [{ required: true, message: 'Please input your username!' }],
                                 })(
-                                    <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Username" />
+                                    <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0)' }} />} placeholder="Username" />
                                 )}
                             </FormItem>
                             <FormItem>
                                 {getFieldDecorator('password', {
                                     rules: [{ required: true, message: 'Please input your Password!' }],
                                 })(
-                                    <Input prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />} type="password" placeholder="Password" />
+                                    <Input prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0)' }} />} type="password" placeholder="Password" />
                                 )}
                             </FormItem>
                             <FormItem>
