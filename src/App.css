@@ -74,7 +74,7 @@
   background:white;
 }
 
-.author-description{
+/* .author-description{
   width:100px;
   height:70px;
   position:relative;
@@ -92,4 +92,4 @@
   border-radius:100%;
   /* box-shadow: 0px 100px 0px 300px rgba(0, 21, 40,0.8); */
   box-shadow: 0px 100px 0px 300px rgba(255, 255, 255,0.5);
-}
+} */
