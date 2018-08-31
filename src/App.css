@@ -1,6 +1,9 @@
 @import '~antd/dist/antd.css';
 @import url('https://fonts.googleapis.com/css?family=Bitter');
 
+*{
+  outline:none;
+}
 .App {
   text-align: center;
 }
@@ -21,12 +24,13 @@
 
 .blogcontent{
   background:#ddd;
-  min-height:100vh;
+  /* min-height:10vh; */
   max-width:90vw;
   margin:-100px auto;
   box-shadow: 0px 5px 10px 1px #333;
   border-radius: 5px;
   margin-bottom: 30px;
+  padding:20px;
 }
 
 
@@ -69,10 +73,26 @@
   box-shadow: 5px 10px 18px #888;
 }
 .content{
-  width:90vw;
-  height:150px;
+  width:87vw;
   background:white;
+  padding:50px;
+  padding-top:100px;
+  margin-bottom:50px;
+  line-height:1.8;
+  font-size:20px;
+  text-align:justify;
+
 }
+
+.clap{
+  background-color: transparent;
+  border:none;
+  padding:10px;
+  border-radius: 50%;
+}
+/* .clap:focus{
+  background:white;
+} */
 
 /* .author-description{
   width:100px;
