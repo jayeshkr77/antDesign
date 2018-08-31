@@ -13,6 +13,7 @@ export default class Example extends React.Component {
         this.state = { text: '' ,rerender:false};
         this.handleChange = this.handleChange.bind(this);
     }
+    
     logout = (event) => {
         localStorage.removeItem('adminToken');
         this.setState({ rerender:!this.state.rerender });
@@ -21,6 +22,7 @@ export default class Example extends React.Component {
     handleChange(value) {
         this.setState({ text: value })
     }
+
     render() {
         if (localStorage.getItem('adminToken')){
         return (
