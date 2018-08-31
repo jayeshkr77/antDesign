@@ -14,9 +14,12 @@ class Blog extends Component {
                         <div className="author-image"></div>
                         <div className="shadow"></div>
                         <span className="genre">electrical</span>
+                        <div className="author-description"></div>
                     </div>
                     <div className="mainimage"></div>
-        
+                    <div>
+
+                    </div>
                 </div>
 
             </div>

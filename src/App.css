@@ -24,7 +24,7 @@
   min-height:100vh;
   max-width:90vw;
   margin:-100px auto;
-  box-shadow: 0px 0px 20px 10px #333;
+  box-shadow: 0px 5px 10px 1px #333;
   border-radius: 5px;
   margin-bottom: 30px;
 }
@@ -72,4 +72,24 @@
   width:90vw;
   height:150px;
   background:white;
+}
+
+.author-description{
+  width:100px;
+  height:70px;
+  position:relative;
+  margin:-170px 120px;
+  overflow:hidden;
+}
+
+.author-description::before{
+  content:'';
+  position:absolute;
+  top:-5px;
+  right:50%;
+  width:100px;
+  height:130px;
+  border-radius:100%;
+  /* box-shadow: 0px 100px 0px 300px rgba(0, 21, 40,0.8); */
+  box-shadow: 0px 100px 0px 300px rgba(255, 255, 255,0.5);
 }

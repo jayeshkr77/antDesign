@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 import { Layout, Menu, Icon } from 'antd';
 const { Header } = Layout;
 
@@ -12,10 +13,10 @@ class Nav extends Component {
                     mode="horizontal"
                 >
                     <div className="container">
-                        <a href="/"><img style={{ float: 'left', marginTop: 12 }} src="https://s3.amazonaws.com/thinkific-import/114168/lRGDunfcQlGiplOHgrog_Final Big Logo.png " height="40px" /></a>
+                        <Link to='/'><img style={{ float: 'left', marginTop: 12 }} src="https://s3.amazonaws.com/thinkific-import/114168/lRGDunfcQlGiplOHgrog_Final Big Logo.png " height="40px" /></Link>
                         <div style={{ float: 'right', paddingTop: 8 }} >
                             <a className="social-button" style={link}>GET STARTED WITH VROOK <i class="fas fa-graduation-cap" style={{ paddingLeft: "5px" }}></i></a>
-                            <a href="/about" className="social-button" style={socialLink2}>ABOUT US <Icon type="global" style={{ paddingLeft: '5px' }} /></a>
+                            <Link to='/about' className="social-button" style={socialLink2}>ABOUT US <Icon type="global" style={{ paddingLeft: '5px' }} /></Link>
                         </div>
                     </div>
                 </Menu>
