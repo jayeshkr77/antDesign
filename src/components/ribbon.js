@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Ribbon extends Component {
   render() {
     return (
-      <div class="ribbon" style={ribbon}>
+      <div className="ribbon" style={ribbon}>
         {this.props.genre}
       </div>
     );
