@@ -4,8 +4,12 @@ import Ribbon from './ribbon';
 
 const { Meta } = Card;
 
+// let count = 1;
+// let top = 2;
+
 class Cards extends Component {
   render() {
+    
     return (
       <Card
         hoverable
@@ -18,6 +22,7 @@ class Cards extends Component {
         <div style = {ribbon1}>
           <Ribbon genre="electrical" />
         </div>
+
         <div style = {ribbon2} >
           <Ribbon genre="mechanical" />
         </div>
@@ -30,7 +35,7 @@ export default Cards;
 
 const ribbon1 = {
   position:'absolute',
-  top:2,
+  top: 2,
   left:-10,
 }
 

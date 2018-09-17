@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Cform from './contactform.js';
 import Clap from '../assets/clap.png';
 
 class Blog extends Component {
@@ -9,31 +10,49 @@ class Blog extends Component {
         }
     }
 
-
     handleClick = (event) => {
         this.setState({
             counter: this.state.counter + 1
         })
     }
 
-    componentDidMount(){
-        window.scrollTo(0,0);
+    componentDidMount() {
+        window.scrollTo(0, 0);
     }
 
+
     render() {
+        var gen = {
+            position: 'relative',
+            top: '-20vh',
+            left: '40%',
+            color: '#333',
+            fontWeight: '900',
+            background: '#ffde00',
+            width: '200px',
+            padding: '5px 10px',
+            borderRadius: '20px',
+            marginLeft:'5px',
+        };
+
         return (
             <div className="blog">
                 <div className="parallax2"></div>
                 <div className="blogcontent">
                     <div className="blog-genre">
-                        <div className="author-image"></div>
+                        <div className="author-image">{/*this.props.card.image*/}</div>
                         <div className="shadow"></div>
-                        <span className="genre">electrical</span>
+                        {/*this.props.card.genre.map(genre => {<span className="genre" style={gen}>genre</span>}) */}
+                        <span className="genre" style={gen}>electrical</span>
+                        <span className="genre" style={gen}>mech</span>
+                        <span className="genre" style={gen}>cse</span>
+
                         <div className="author-description"></div>
                     </div>
                     <div className="mainimage"></div>
                     <div>
                         <div class="content">
+                            {/*this.props.card.content*/}
                             <p>
                                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
         Why do we use it?
@@ -57,6 +76,7 @@ class Blog extends Component {
                         <button className="clap" onClick={this.handleClick}><div style={{}}>{this.state.counter}</div><img src={Clap} alt="clap" height="60px" width="60px" /></button>
                     </div>
                 </div>
+                <Cform />
 
             </div>
         )

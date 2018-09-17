@@ -40,6 +40,6 @@ export default About;
 const contentcss = {
     width: '90%',
     margin: '0px auto',
-    marginTop: '100px',
+    marginTop: '30px',
 
 }

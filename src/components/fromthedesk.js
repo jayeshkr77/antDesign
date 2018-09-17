@@ -11,9 +11,9 @@ class Fromthedesk extends Component {
             <div>
                 <div style={{ paddingTop: '20px' }}>
                     <h1>From The Desk</h1>
-                    <div className="Logo">
-                    <img src="https://s3.amazonaws.com/thinkific-import/114168/96yAH4aMTCGRNKcyqztJ_iCON_logo1.png" width="30px" height="30px" />
-                </div>
+                    <div className="Logo" style={{marginTop:'-10px'}}>
+                        <img src="https://s3.amazonaws.com/thinkific-import/114168/96yAH4aMTCGRNKcyqztJ_iCON_logo1.png" width="30px" height="30px" />
+                    </div>
                 </div>
                 <Row gutter={16}>
                     <Col span={17}>

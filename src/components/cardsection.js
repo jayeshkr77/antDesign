@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Layout, Row, Col, Card } from 'antd';
 import Cards from './cards';
 import './css/cardsection.css';
 import Ribbon from './ribbon';
 
 class CardSection extends Component {
+
+	constructor(props){
+		super(props);
+		this.state = {
+			post : []
+		}
+	}
 
 	// _renderCards = () => {
 	//     let cards = this.props.data.map(card =>
@@ -14,15 +21,21 @@ class CardSection extends Component {
 
 	//     return cards;
 	// }
-
+	// componentDidMount() {
+	// 	fetch('https://jsonplaceholder.typicode.com/posts/1')
+	// 		.then(response => response.json())
+	// 		.then(json => {console.log(json);this.setState(post:json)})
+	// }
 
 	render() {
+		var count = 0;
 		return (
 			<Layout>
 				<div class="container" style={{ marginTop: 30 }}>
 					<Row gutter={16}>
+						{/* {this.state.posts.map(card => {${count<=3 && <Col span={6}><Link to='/blog/${card.id}'> <Card key={movie.id} card={posts} /></Link></Col>}${count++}})}*/}
 						<Col span={6}>
-							<Link to='/blog/123'> 
+							<Link to='/blog/123'>
 								<Cards />
 							</Link>
 						</Col>
