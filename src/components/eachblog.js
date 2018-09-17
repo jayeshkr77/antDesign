@@ -73,10 +73,13 @@ class Blog extends Component {
                             It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
 
                         </div>
+                        <div style={{width:'50%',margin:'0px auto'}}>
+                            <Cform font='2'/>
+                        </div>
+                        
                         <button className="clap" onClick={this.handleClick}><div style={{}}>{this.state.counter}</div><img src={Clap} alt="clap" height="60px" width="60px" /></button>
                     </div>
                 </div>
-                <Cform />
 
             </div>
         )

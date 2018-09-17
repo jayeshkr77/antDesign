@@ -4,8 +4,8 @@ import Ribbon from './ribbon';
 
 const { Meta } = Card;
 
-// let count = 1;
-// let top = 2;
+let count = 1;
+let top = 2;
 
 class Cards extends Component {
   render() {
@@ -13,13 +13,13 @@ class Cards extends Component {
     return (
       <Card
         hoverable
-        cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" width="240px" height="240px" />}
+        cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" width="240px" height="240px" padding="10px"/>}
       >
         <Meta
           title="Europe Street beat"
           description="www.instagram.com"
         />
-        <div style = {ribbon1}>
+        <div style = {{position:'absolute',top:top,left:-10,}}>
           <Ribbon genre="electrical" />
         </div>
 

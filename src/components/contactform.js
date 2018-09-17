@@ -7,7 +7,7 @@ export default class Cform extends Component {
         return (
             <div className="container" style={{ paddingBottom: '30px' }}>
                 <div>
-                    <h1>Looking For NewsLetter</h1>
+                    {this.props.font==2?<h3>Looking For NewsLetter</h3>:<h1>Looking For NewsLetter</h1>}
                 </div>
                 <div>
                     <i style={{ paddingRight: '10px' }} class="fas fa-grin"></i><input style={{ marginBottom: '30px' }} className="form-input" type="text" placeholder="Full Name" /> <br />
