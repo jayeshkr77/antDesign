@@ -4,12 +4,12 @@ import Ribbon from './ribbon';
 
 const { Meta } = Card;
 
-let count = 1;
-let top = 2;
-
 class Cards extends Component {
+  
   render() {
-    
+    let count = 0;
+    let top = 4;
+
     return (
       <Card
         hoverable
@@ -19,28 +19,10 @@ class Cards extends Component {
           title="Europe Street beat"
           description="www.instagram.com"
         />
-        <div style = {{position:'absolute',top:top,left:-10,}}>
-          <Ribbon genre="electrical" />
-        </div>
+        {this.props.genre && this.props.genre.map(gen=> <div style = {{position:'absolute',top:(top+(count++)*28),left:-10,}}><Ribbon genre={gen} /></div>)}
 
-        <div style = {ribbon2} >
-          <Ribbon genre="mechanical" />
-        </div>
-          
       </Card>
     );
   }
 }
 export default Cards;
-
-const ribbon1 = {
-  position:'absolute',
-  top: 2,
-  left:-10,
-}
-
-const ribbon2 = {
-  position:'absolute',
-  top:28,
-  left:-10,
-}

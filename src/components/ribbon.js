@@ -12,5 +12,6 @@ class Ribbon extends Component {
 export default Ribbon;
 const ribbon = {
   backgroundColor:'yellow',
-  paddingLeft:'0.3em',
+  paddingLeft:'0.5em',
+  paddingRight:'0.5em',
 }
