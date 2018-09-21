@@ -20,8 +20,8 @@ const PartcleOpt = {
 class Section extends Component {
     render() {
         return (
-            <div>
-                <div className="particle" style={{ height: '100%' }}>
+            <div style={{paddingBottom:'1px'}}>
+                <div className="particle" style={{ height: '100%'}}>
                     <Particles params={PartcleOpt} />
                     <Quote />
                 </div>

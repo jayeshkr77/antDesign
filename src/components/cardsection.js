@@ -36,18 +36,18 @@ class CardSection extends Component {
 				<div class="container" style={{ marginTop: 30 }}>
 					<Row gutter={16}>
 						{/* {this.state.posts.map(card => {${count<=3 && <Col span={6}><Link to='/blog/${card.id}'> <Card key={movie.id} card={posts} /></Link></Col>}${count++}})}*/}
-						<Col span={6}>
+						<Col sm={{span:12}} md={{span:8}} lg={{span:6}} >
 							<Link to='/blog/123'>
 								<Cards genre={gen}/>
 							</Link>
 						</Col>
-						<Col span={6}>
+						<Col sm={{span:12}} md={{span:8}} lg={{span:6}}>
 							<Cards />
 						</Col>
-						<Col span={6}>
+						<Col sm={{span:12}} md={{span:8}} lg={{span:6}}>
 							<Cards />
 						</Col>
-						<Col span={6}>
+						<Col sm={{span:12}} md={{span:8}} lg={{span:6}}>
 							<Cards />
 						</Col>
 
