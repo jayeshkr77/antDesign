@@ -13,7 +13,8 @@ class Blog extends Component {
             counter: 0,
             url:parseInt(this.props.id),
             post:[],
-            visible: false
+            visible: false,
+            count:0,
         }
         this.element = React.createRef()
     }
@@ -37,9 +38,12 @@ class Blog extends Component {
       });
     }
     handleClick = (event) => {
-        this.setState({
-            counter: this.state.counter + 1
-        })
+        if(this.state.count < 5 )
+            this.setState({
+                counter: this.state.counter + 1,
+                count:this.state.count+1,
+            })
+
     }
 
     componentDidMount() {
@@ -79,11 +83,9 @@ class Blog extends Component {
         <div className="blogcontent">
             <div className="blog-genre">
                 <div className="author-image"><img src={im} alt="img" width='200px' height="200px"/></div>
-                <div style = {{position:'absolute',top:-50,left:0,fontSize:'40px',width:'90%',textAlign:'center',color:'white',fontWeight:"bold",textDecoration:'underline'}}>{b.title}</div>
+                <div style = {{position:'absolute',top:-50,left:0,fontSize:'40px',width:'97%',textAlign:'center',color:'white',fontWeight:"bold",textDecoration:'underline'}}>{b.title}</div>
                 <div className="shadow"></div>
                 {/*this.props.card.genre.map(genre => {<span className="genre" style={gen}>genre</span>}) */}
-
-                <div className="author-description">{50-b.title.length}</div>
                 <div style = {{position:'absolute',top:0,left:0,transform:'translate(190px,130px)',}}>Author:<span style={{fontWeight:"bold"}}> {b.author}</span></div>
                 <div style = {{position:'absolute',top:0,left:0,transform:'translate(190px,155px)'}}>Published on: {b.date}</div>
             </div>
@@ -92,7 +94,7 @@ class Blog extends Component {
                 <div class="content" >
                     <p style={{fontFamily:'-apple-system, system-ui, BlinkMacSystemFont',color:'black'}} >{b.content}</p>
                     <Divider />
-                    <p style={{marginLeft:'46%'}}>{this.state.counter} <Divider type="vertical"/><Icon onClick={this.handleClick} type="star" /></p>
+                    <p style={{marginLeft:'46%'}}>{this.state.counter} <Divider type="vertical"/><Icon onClick={this.handleClick} style={{color:'yellow'}} type="star" /></p>
                 </div>
                 {/* <button style={{}} onClick={this.handleSubs}>Subscribe</button> */}
                 <div>
