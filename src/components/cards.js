@@ -13,10 +13,9 @@ class Cards extends Component {
     return (
       <Card style={{marginBottom:'2px'}}>
         <div style={{ margin: '-15px', marginBottom: '1px' }}>
-          <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" width="240px" height="240px" />
+          <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" width="100%" height="100%" />
         </div>
-        <h2>Blog Title</h2>
-        <h4>blog description</h4>
+        <h2>{this.props.title}</h2>
         {this.props.genre && this.props.genre.map(gen => <div style={{ position: 'absolute', top: (top + (count++) * 28), left: -10, }}><Ribbon genre={gen} /></div>)}
 
       </Card>

@@ -28,7 +28,6 @@ class AdminLoginForm extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
-            console.log(values);
             console.log(err);
             if (!err) {
                 const msg = message.loading('Signing in', 0);

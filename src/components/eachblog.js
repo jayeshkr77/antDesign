@@ -1,15 +1,38 @@
 import React, { Component } from 'react';
 import Cform from './contactform.js';
 import Clap from '../assets/clap.png';
+import axios from 'axios';
+import { Modal, Button,Icon, Divider } from 'antd';
 
 class Blog extends Component {
     constructor(props) {
         super(props);
         this.state = {
             counter: 0,
+         //   url:parseInt(props.match.params.id,10),
+            post:[],
+            visible: false
         }
     }
-
+    showModal = () => {
+      this.setState({
+        visible: true,
+      });
+    }
+  
+    handleOk = (e) => {
+      console.log(e);
+      this.setState({
+        visible: false,
+      });
+    }
+  
+    handleCancel = (e) => {
+      console.log(e);
+      this.setState({
+        visible: false,
+      });
+    }
     handleClick = (event) => {
         this.setState({
             counter: this.state.counter + 1
@@ -18,7 +41,18 @@ class Blog extends Component {
 
     componentDidMount() {
         window.scrollTo(0, 0);
+        axios({
+            method: 'get',
+            url: 'https://56y1lomy27.execute-api.ap-south-1.amazonaws.com/v1/get/314',
+        }).then((res) => {
+            this.setState({
+                post : res.data.Blog,
+            })
+        }).catch((error) => {
+            console.log(error);
+        })
     }
+    
 
 
     render() {
@@ -35,53 +69,50 @@ class Blog extends Component {
             marginLeft:'5px',
         };
 
-        return (
-            <div className="blog">
-                <div className="parallax2"></div>
-                <div className="blogcontent">
-                    <div className="blog-genre">
-                        <div className="author-image">{/*this.props.card.image*/}</div>
-                        <div className="shadow"></div>
-                        {/*this.props.card.genre.map(genre => {<span className="genre" style={gen}>genre</span>}) */}
-                        <span className="genre" style={gen}>electrical</span>
-                        <span className="genre" style={gen}>mech</span>
-                        <span className="genre" style={gen}>cse</span>
+        const blogger = this.state.post.map((b,index)=>
+        <div key={index} style={{fontFamily:'-apple-system, system-ui, BlinkMacSystemFont',color:'black'}}>
+        <div className="parallax2"></div>
+        <div className="blogcontent">
+            <div className="blog-genre">
+                <div className="author-image"></div>
+                <div style = {{position:'absolute',top:0,left:0,fontSize:'40px',transform:'translate(80%,-50px)',color:'white',fontWeight:"bold"}}>{b.title}</div>
+                <div className="shadow"></div>
+                {/*this.props.card.genre.map(genre => {<span className="genre" style={gen}>genre</span>}) */}
 
-                        <div className="author-description"></div>
-                    </div>
-                    <div className="mainimage"></div>
-                    <div>
-                        <div class="content">
-                            {/*this.props.card.content*/}
-                            <p>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        Why do we use it?
-</p>
-                            <p>
-                                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                Why do we use it?
-</p>
-                            <div style={{ width: "400px", height: "300px", margin: '20px auto', backgroundColor: '#eee' }}>
-                                <img src="" alt="blog photo" width="200px" height="300px" />
-                            </div>
-                            <p>
-                                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                Why do we use it?
-</p>
-                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-
-                        </div>
-                        <div style={{width:'50%',margin:'0px auto'}}>
-                            <Cform font='2'/>
-                        </div>
-                        
-                        <button className="clap" onClick={this.handleClick}><div style={{}}>{this.state.counter}</div><img src={Clap} alt="clap" height="60px" width="60px" /></button>
-                    </div>
-                </div>
-
+                <div className="author-description"></div>
+                <div style = {{position:'absolute',top:0,left:0,transform:'translate(190px,130px)',fontWeight:"bold"}}>Author: {b.author}</div>
+                <div style = {{position:'absolute',top:0,left:0,transform:'translate(190px,155px)'}}>Published on: {b.date}</div>
             </div>
+            <div className="mainimage"></div>
+            <div>
+                <div class="content" >
+                    <p style={{fontFamily:'-apple-system, system-ui, BlinkMacSystemFont',color:'black'}} >{b.content}</p>
+                    <Divider />
+                    <p style={{marginLeft:'46%'}}>{this.state.counter} <Divider type="vertical"/><Icon onClick={this.handleClick} type="star" /></p>
+                </div>
+                {/* <button style={{}} onClick={this.handleSubs}>Subscribe</button> */}
+                <div>
+        <Button type="primary" onClick={this.showModal}>
+          Subscribe
+        </Button>
+        <Modal
+          title="Subscribe"
+          visible={this.state.visible}
+          onOk={this.handleOk}
+          onCancel={this.handleCancel}
+        >
+         <Cform font='2'/>
+        </Modal>
+      </div>
+            </div>
+        </div>
+
+    </div>);
+
+        return (
+            <div>
+           {blogger}
+           </div>
         )
     }
 }

@@ -1,13 +1,15 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
-import { Col, Form, FormGroup, Input } from 'reactstrap';
-import { Button } from 'antd';
+import { Button, message, Form , Input } from 'antd';
 import 'react-quill/dist/quill.snow.css';
 import './css/blog.css';
 import Editor from './quilltoolbar';
+import axios from 'axios';
+const FormItem = Form.Item;
+const {TextArea} = Input;
 
 
-export default class Example extends React.Component {
+class Example extends React.Component {
     constructor(props) {
         super(props);
         this.state = { text: '' ,rerender:false};
@@ -23,34 +25,77 @@ export default class Example extends React.Component {
         this.setState({ text: value })
     }
 
+    handleSubmit = (e) => {
+        e.preventDefault();
+
+        this.props.form.validateFieldsAndScroll((err, values) => {
+            if(!err){
+
+                var userToken = 'Bearer '.concat(localStorage.getItem('adminToken'));
+                axios({
+                    method: 'post',
+                    url: 'https://56y1lomy27.execute-api.ap-south-1.amazonaws.com/v1/new',
+                    data: values,
+                    headers:{
+                        'Authorization': userToken
+                    }
+                }).then((res) => {
+                    message.success("ADDED");
+                }).catch((error) => {
+                    
+                    message.error('Not Found');
+                }) 
+            }
+        });
+
+        
+    }
+
     render() {
         if (localStorage.getItem('adminToken')){
+        const {getFieldDecorator} = this.props.form;
         return (
             <div>
                 <div style={{ marginTop: 10 }}>
                     <Button type="primary" onClick={this.logout}>Logout</Button>
                 </div>
                 <div className="container" style={{ width: '90%', padding: '30px', margin: '100px auto' }}>
-                    <Form>
-                        <FormGroup style={{ float: 'right' }}>
-                            <Button type="primary">Submit</Button>
-                        </FormGroup>
-                        <FormGroup row style={{ marginTop: '20px' }}>
-                            <Col sm={12}>
-                                <Input type="email" name="email" id="exampleEmail" placeholder="Admin Name" />
-                            </Col>
-                        </FormGroup>
-                        <FormGroup row>
-                            <Col sm={12}>
-                                <Input type="text" name="genere" id="exampleText" placeholder="genere" />
-                            </Col>
-                        </FormGroup>
-                        <FormGroup>
-                            <div id="editor-container">
-                                <Editor placeholder={'Write something...'} />
-                            </div>
-                        </FormGroup>
+                    <Form onSubmit={this.handleSubmit}>
+                        <FormItem row style={{ marginTop: '20px' }}>
+                            {
+                                getFieldDecorator('title',{
+                                    rules:[{required:true,message:'Required'}]
+                                })(
+                                    <Input type="text" placeholder="Title" />
+                                )
+                            }
 
+                            
+                           
+                        </FormItem>
+                        <FormItem row>
+                        {
+                                getFieldDecorator('author',{
+                                    rules:[{required:true,message:'Required'}]
+                                })(
+                                    <Input type="text" placeholder="Author" />
+                                )
+                            }
+                
+                        </FormItem>
+                        <FormItem>
+                        {
+                                getFieldDecorator('content',{
+                                    rules:[{required:true,message:'Requirecfd'}]
+                                })(
+                                    // <Editor type="text" placeholder={'Write something...'} />
+                                    <TextArea rows={4} />
+                                )
+                            }
+                        </FormItem>
+                        <FormItem style={{ float: 'right' }}>
+                            <Button type="primary" htmlType="submit">Submit</Button>
+                        </FormItem>
 
 
                     </Form>
@@ -63,3 +108,5 @@ export default class Example extends React.Component {
     }
     }
 }
+
+export default Form.create()(Example);

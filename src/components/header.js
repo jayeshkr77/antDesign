@@ -6,11 +6,13 @@ const { Header } = Layout;
 class Nav extends Component {
     render() {
         return (
-
+            
             <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
+                <div>
                 <Menu
                     theme="dark"
                     mode="horizontal"
+                    
                 >
                     <div className="container">
                         <Link to='/'><img style={{ float: 'left', marginTop: 12 }} src="https://s3.amazonaws.com/thinkific-import/114168/lRGDunfcQlGiplOHgrog_Final Big Logo.png " height="40px" /></Link>
@@ -20,8 +22,9 @@ class Nav extends Component {
                         </div>
                     </div>
                 </Menu>
+                </div>
             </Header >
-
+            
         );
     } 
 }

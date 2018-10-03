@@ -4,6 +4,7 @@ import { Layout, Row, Col, Card } from 'antd';
 import Cards from './cards';
 import './css/cardsection.css';
 import Ribbon from './ribbon';
+import axios from 'axios';
 
 class CardSection extends Component {
 
@@ -21,39 +22,41 @@ class CardSection extends Component {
 
 	//     return cards;
 	// }
-	// componentDidMount() {
-	// 	fetch('https://jsonplaceholder.typicode.com/posts/1')
-	// 		.then(response => response.json())
-	// 		.then(json => {console.log(json);this.setState(post:json)})
-	// }
+	componentDidMount() {
+		axios({
+			method: 'get',
+			url: 'https://56y1lomy27.execute-api.ap-south-1.amazonaws.com/v1/get',
+		}).then((res) => {
+			this.setState({
+				post : res.data.Blog,
+			})
+		}).catch((error) => {
+			console.log(error);
+		})
+	}
 
 	render() {
 		var count = 0;
 		var top = 2;
-		var gen = ['mechanical','civil']
+		var gen = ['mechanical','civil'];
+		const bloglist = this.state.post.map((blog, index)=>
+		<Col key={index} sm={{span:12}} md={{span:8}} lg={{span:6}} >
+		<Link to={'/blog/' + blog.id} >
+			<Cards genre={gen} title={blog.title}/>
+		</Link>
+	</Col>
+
+		);
 		return (
 			<Layout>
 				<div class="container" style={{ marginTop: 30 }}>
 					<Row gutter={16}>
-						{/* {this.state.posts.map(card => {${count<=3 && <Col span={6}><Link to='/blog/${card.id}'> <Card key={movie.id} card={posts} /></Link></Col>}${count++}})}*/}
-						<Col sm={{span:12}} md={{span:8}} lg={{span:6}} >
-							<Link to='/blog/123'>
-								<Cards genre={gen}/>
-							</Link>
-						</Col>
-						<Col sm={{span:12}} md={{span:8}} lg={{span:6}}>
-							<Cards />
-						</Col>
-						<Col sm={{span:12}} md={{span:8}} lg={{span:6}}>
-							<Cards />
-						</Col>
-						<Col sm={{span:12}} md={{span:8}} lg={{span:6}}>
-							<Cards />
-						</Col>
-
+						{/* {this.state.posts.map(card => {{count<=3 && <Col span={6}><Link to='/blog/${card.id}'> <Card key={movie.id} card={posts} /></Link></Col>}${count++}})}*/}
+					{bloglist}
+					
 					</Row>
 					<Row>
-						<Card style={{ padding: 0, width: 1000, marginLeft: 110, height: 250, marginTop: 30, marginBottom: 30 }}>
+						<Card style={{ padding: 0, width: '90%', marginLeft: 110, height: 250, marginTop: 30, marginBottom: 30 }}>
 							<Row>
 								<Col span={6} style={{ position: 'absolute', marginLeft: '-140px' }}>
 									<div>
