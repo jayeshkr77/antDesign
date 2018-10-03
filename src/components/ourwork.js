@@ -5,7 +5,7 @@ class OurWork extends Component{
         return(
             <div style={{paddingBottom:'50px', paddingTop:'50px'}}>
                 <div>
-                    <h1>Our Work</h1>
+                    <h1><u>Our Work</u></h1>
                     <div className="Logo">
                         <img src="https://s3.amazonaws.com/thinkific-import/114168/96yAH4aMTCGRNKcyqztJ_iCON_logo1.png" width="30px" height="30px" />
                     </div>
@@ -19,7 +19,7 @@ class OurWork extends Component{
                         <div style={{textAlign:'left',paddingLeft:'35px',paddingTop:'25px'}}>
                         <img src="https://s3.amazonaws.com/thinkific-import/114168/qO2Qb0kPToasA8JvxHfB_logo-min.png" height="100px" width="200px" alt="BOOKSBEKA.COM" title="BOOKSBEKA.COM" class="img-responsive left" />
                         </div>
-                        <div style={{textAlign:"left",padding:"10px 50px 10px 30px"}}>
+                        <div style={{textAlign:"left",padding:"10px 50px 10px 50px"}}>
                             Booksbeka.com is Karnataka's largest online store for engineering books, connecting students, colleges and suppliers. Founded in December 2015, Booksbeka.com is recognised for its innovative approach towards implementing business values and is responsive to changing customer needs. We aim at providing complete transparency in buying and selling of books. 
                         </div>
                     </div>

@@ -9,7 +9,7 @@ class Blog extends Component {
         super(props);
         this.state = {
             counter: 0,
-         //   url:parseInt(props.match.params.id,10),
+            // url:parseInt(props.match.params.id,10),
             post:[],
             visible: false
         }
@@ -75,12 +75,12 @@ class Blog extends Component {
         <div className="blogcontent">
             <div className="blog-genre">
                 <div className="author-image"></div>
-                <div style = {{position:'absolute',top:0,left:0,fontSize:'40px',transform:'translate(80%,-50px)',color:'white',fontWeight:"bold"}}>{b.title}</div>
+                <div style = {{position:'absolute',top:0,left:0,fontSize:'40px',transform:'translate(80%,-50px)',color:'white',fontWeight:"bold",textDecoration:'underline'}}>{b.title}</div>
                 <div className="shadow"></div>
                 {/*this.props.card.genre.map(genre => {<span className="genre" style={gen}>genre</span>}) */}
 
                 <div className="author-description"></div>
-                <div style = {{position:'absolute',top:0,left:0,transform:'translate(190px,130px)',fontWeight:"bold"}}>Author: {b.author}</div>
+                <div style = {{position:'absolute',top:0,left:0,transform:'translate(190px,130px)',}}>Author:<span style={{fontWeight:"bold"}}> {b.author}</span></div>
                 <div style = {{position:'absolute',top:0,left:0,transform:'translate(190px,155px)'}}>Published on: {b.date}</div>
             </div>
             <div className="mainimage"></div>
