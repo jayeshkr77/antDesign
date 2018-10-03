@@ -17,7 +17,7 @@ export default SocialTab;
 
 const socialLink = {
 
-    color:'black',
+    color:'white',
     textDecoration:'none',
 };
 

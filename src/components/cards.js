@@ -12,10 +12,12 @@ class Cards extends Component {
 
     return (
       <Card style={{ marginBottom: '2px' }}>
-        <div style={{ margin: '-15px', marginBottom: '1px' }}>
+        <div style={{ margin: '-15px', marginBottom: '1px'}}>
           <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" width="100%" height="100%" />
         </div>
-        <h2 style={{ overflow: 'hidden' }}>{this.props.title}</h2>
+        <div style={{height:'60px',position:"relative"}}>
+        <h4 style={{textAlign:"center",width:'100%',position:"absolute",top:'50%',left:'50%',transform:'translate(-50%,-50%)'}}>{this.props.title}</h4>
+        </div>
         {this.props.genre && this.props.genre.map(gen => <div style={{ position: 'absolute', top: (top + (count++) * 28), left: -10, }}><Ribbon genre={gen} /></div>)}
 
       </Card>

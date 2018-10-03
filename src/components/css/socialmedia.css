@@ -20,11 +20,10 @@
 .social-button{
     /* border: 1px solid #ffde00 ; */
     background-color: #ffde00;
-    color: black;
+    color: white;
     padding: 8px 20px 8px 20px;
     font-size: 12px;
     text-decoration-style: solid;
-    box-shadow: 3px 3px 15px 5px #373737;
-    font-family: 'Bitter', serif;
+    box-shadow: 0px 1px 3px #373737;
 
 }

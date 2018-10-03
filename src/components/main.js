@@ -22,7 +22,9 @@ export default class Main extends Component {
                 </div>
 
                 <SocialTab />
-                <CardSection number={number} />
+                <div className="card">
+                    <CardSection number={number} />
+                </div>
                 <Cform />
                 <Foot />
             </Layout>

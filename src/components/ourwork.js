@@ -10,13 +10,13 @@ class OurWork extends Component{
                         <img src="https://s3.amazonaws.com/thinkific-import/114168/96yAH4aMTCGRNKcyqztJ_iCON_logo1.png" width="30px" height="30px" />
                     </div>
                 </div>
-                <div style={{display:'flex',paddingTop:'20px'}}>
+                <div style={{display:'flex',paddingTop:'20px',paddingLeft:'50px'}}>
                     <div style={{flex:1}}>
-                        <div style={{display:'flex',paddingLeft:'35px'}}>
+                        <div style={{display:'flex',paddingLeft:'50px'}}>
                             <div style={{flex:0.1}}><div style={{width:'3px',height:'25px',backgroundColor:'pink'}}></div></div>
-                            <div style={{flex:30,paddingLeft:'5px',textAlign:'left'}}>Our Previous Creation</div>
+                            <div style={{flex:30,paddingLeft:'10px',textAlign:'left',fontWeight:'bold'}}>Our Previous Creation</div>
                         </div>
-                        <div style={{textAlign:'left',paddingLeft:'35px',paddingTop:'25px'}}>
+                        <div style={{textAlign:'left',paddingLeft:'45px',paddingTop:'25px'}}>
                         <img src="https://s3.amazonaws.com/thinkific-import/114168/qO2Qb0kPToasA8JvxHfB_logo-min.png" height="100px" width="200px" alt="BOOKSBEKA.COM" title="BOOKSBEKA.COM" class="img-responsive left" />
                         </div>
                         <div style={{textAlign:"left",padding:"10px 50px 10px 50px"}}>
@@ -26,7 +26,7 @@ class OurWork extends Component{
                     <div style={{flex:1}}>
                     <div style={{display:'flex',paddingLeft:'35px'}}>
                             <div style={{flex:0.1}}><div style={{width:'3px',height:'25px',backgroundColor:'pink'}}></div></div>
-                            <div style={{flex:30,paddingLeft:'5px',textAlign:'left'}}>Our Non Profit Venture</div>
+                            <div style={{flex:30,paddingLeft:'5px',textAlign:'left',fontWeight:'bold'}}>Our Non Profit Venture</div>
                         </div>
                         
                         <div style={{textAlign:'left',paddingLeft:'35px',paddingTop:'30px'}}>

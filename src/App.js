@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Main from './components/main.js';
 import BlogPage from './components/blogmainpage.js';
@@ -14,7 +14,7 @@ class App extends Component {
     return (
       <div className="App">
         <BrowserRouter>
-          <div>
+          <Switch>
             <Route exact path='/' component={Main} />
             <Route exact path='/blog/:id' component={BlogPage} />
             <Route exact path='/about' component={About} />
@@ -22,7 +22,7 @@ class App extends Component {
             <Route exact path='/blogpost' component={Blogging} />
             <Route exact path='/admin' component={WrappedNormalLoginForm} />
             <Route exact path='/admin/dashboard' component={Example} />
-          </div>
+          </Switch>
         </BrowserRouter>
       </div>
     );

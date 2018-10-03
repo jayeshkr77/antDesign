@@ -9,7 +9,7 @@ export default class BlogPage extends Component {
         return (
             <Layout>
                 <Nav />
-                <Blog />
+                <Blog id={this.props.match.params.id}/>
                 <Foot />
             </Layout>
         );

@@ -23,13 +23,6 @@ export default class Cform extends Component {
 
 const socialLink2 = {
 
-    color: 'black',
+    color: 'white',
     textDecoration: 'none',
 };
-
-// const input = {
-//     padding: 10px 0,
-//     background: none,
-//     border: none,
-//     borderBottom: solid 2px grey,
-// }

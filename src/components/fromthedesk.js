@@ -10,7 +10,7 @@ class Fromthedesk extends Component {
         return (
             <div>
                 <div style={{ paddingTop: '20px' }}>
-                    <h1>From The Desk</h1>
+                    <h1><u>From The Desk</u></h1>
                     <div className="Logo" style={{marginTop:'-10px'}}>
                         <img src="https://s3.amazonaws.com/thinkific-import/114168/96yAH4aMTCGRNKcyqztJ_iCON_logo1.png" width="30px" height="30px" />
                     </div>

@@ -33,12 +33,12 @@ export default Nav;
 
 const socialLink2 = {
 
-    color: 'black',
+    color: 'white',
     textDecoration: 'none',
 };
 
 const link = {
     marginRight: 40,
-    color: 'black',
+    color: 'white',
     textDecoration: 'none',
 }
