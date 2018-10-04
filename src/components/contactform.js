@@ -23,6 +23,6 @@ export default class Cform extends Component {
 
 const socialLink2 = {
 
-    color: 'white',
+    color:'#222',
     textDecoration: 'none',
 };

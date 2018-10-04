@@ -32,13 +32,12 @@ class Nav extends Component {
 export default Nav;
 
 const socialLink2 = {
-
-    color: 'white',
     textDecoration: 'none',
+    color:'#222'
 };
 
 const link = {
     marginRight: 40,
-    color: 'white',
+    color:'#222',
     textDecoration: 'none',
 }

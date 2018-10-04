@@ -4,6 +4,7 @@ import { Form, Icon, Input, Button, Checkbox, message } from 'antd';
 import './css/admin.css'
 import axios from 'axios';
 import Example from './blogform';
+import AdminForm from './adminform';
 
 const FormItem = Form.Item;
 
@@ -84,6 +85,7 @@ class AdminLoginForm extends Component {
                         </Form>
                     </div>
                 </div>
+
             );
 
         } else {
