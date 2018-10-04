@@ -3,6 +3,8 @@ import Cform from './contactform.js';
 import Clap from '../assets/clap.png';
 import axios from 'axios';
 import { Modal, Button,Icon, Divider } from 'antd';
+import ClapComponent from 'react-clap';
+
 
 const im = 'https://avatars1.githubusercontent.com/u/38111963?s=400&u=b9a9e9a29dd77e838b4c3fe7a0c0373dcaf27b02&v=4'
 
@@ -15,6 +17,8 @@ class Blog extends Component {
             post:[],
             visible: false,
             count:0,
+            clapsCount: 0,
+            totalClapCount: 100,
         }
         this.element = React.createRef()
     }
@@ -78,7 +82,24 @@ class Blog extends Component {
         const blogger = this.state.post.map((b,index)=>
         <div key={index} style={{fontFamily:'-apple-system, system-ui, BlinkMacSystemFont',color:'black'}}>
         <div className="parallax2"></div>
-        <div className="blogcontent">
+        <ul style={listStyle}>
+        <li style={{fontSize:'10px'}}>
+        <ClapComponent
+          popupClapCount={this.state.clapsCount}
+          onChange={(newClapCount, diff) => {
+            this.setState({
+              clapsCount: newClapCount,
+              totalClapCount: this.state.totalClapCount + diff,
+            });
+          }}
+/>
+        </li>
+        <li style={listyle} data-network="facebook"><Icon style={{ fontSize: 26, color: 'blue', paddingRight: 10 }} type="facebook" />  </li>
+        <li style={listyle} data-network="twitter"><Icon style={{ fontSize: 26, color: '#55ACEE', paddingRight: 10 }} type="twitter" /></li>
+        <li style={listyle} data-network="linkedin"><Icon style={{ fontSize: 26, color: '#007BB5', paddingRight: 10 }} type="linkedin" /></li>
+        <li style={listyle} data-network="instagram"><Icon style={{ fontSize: 26, color: '#125688', paddingRight: 10 }} type="instagram" /></li>
+        </ul>
+       <div className="blogcontent">
             <div className="blog-genre">
                 <div className="author-image"><img src={im} alt="img" width='200px' height="200px"/></div>
                 <div style = {{position:'absolute',top:-50,left:0,fontSize:'40px',width:'97%',textAlign:'center',color:'white',fontWeight:"bold",textDecoration:'underline'}}>{b.title}</div>
@@ -120,3 +141,15 @@ class Blog extends Component {
     }
 }
 export default Blog;
+
+const listStyle = {
+    position:'absolute',
+    top:300,
+    right:0,
+    listStyle:'none',
+    position:'fixed',
+}
+
+const listyle = {
+    padding:'2px',
+}

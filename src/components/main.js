@@ -8,8 +8,6 @@ import Foot from './footer';
 import SocialTab from './socialmedia';
 import Cform from './contactform';
 
-const number = 3;
-
 export default class Main extends Component {
     constructor(props){
 		super(props);

@@ -11,12 +11,6 @@ class CardSection extends Component {
 		var count = 0;
 		var top = 2;
 		const gen = [];
-		var con = '';
-		// const highlist = this.props.high.map((blog, index)=>
-		// <Col span={20} style={{ position: 'absolute', marginLeft: '130px', textAlign: 'justify' }}>
-		// 	{blog.content}					
-		// </Col>
-		// );
 		console.log(this.props.high);
 		const bloglist = this.props.low.map((blog, index)=>
 		<Col key={index} sm={{span:12}} md={{span:8}} lg={{span:6}} >
@@ -30,9 +24,7 @@ class CardSection extends Component {
 			<Layout>
 				<div class="container" style={{ marginTop: 30 }}>
 					<Row gutter={16}>
-						{/* {this.state.posts.map(card => {{count<=3 && <Col span={6}><Link to='/blog/${card.id}'> <Card key={movie.id} card={posts} /></Link></Col>}${count++}})}*/}
-					{bloglist}
-					
+					{bloglist}				
 					</Row>
 					<Row>
 						<Link to={this.props.high ? '/blog/' + this.props.high.id : '/'} >
