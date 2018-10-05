@@ -82,7 +82,7 @@ class Blog extends Component {
 
         const blogger = this.state.post.map((b, index) =>
             <div key={index} style={{ fontFamily: '-apple-system, system-ui, BlinkMacSystemFont', color: 'black' }}>
-                <div className="parallax2"></div>
+                <div className="parallax2" style={{backgroundImage: 'url("https://s3.amazonaws.com/thinkific-import/114168/jaFn08WvQiWPJycXrtW7_bannr.jpg")'}}></div>
                 <ul style={listStyle}>
                     <li style={{ fontSize: '10px' }}>
                         {/* <ClapComponent

@@ -21,7 +21,7 @@ export default class Main extends Component {
 			url: 'https://56y1lomy27.execute-api.ap-south-1.amazonaws.com/v1/get',
 		}).then((res) => {
 			this.setState({
-				post : res.data.Blog,
+				post : res.data.Blog.reverse(),
 			})
 		}).catch((error) => {
 			console.log(error);

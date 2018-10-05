@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
+import { Redirect,Link } from 'react-router-dom';
 import { Button, message, Form , Input ,Divider,Icon,Upload,Checkbox } from 'antd';
 import 'react-quill/dist/quill.snow.css';
 import './css/blog.css';
@@ -113,7 +113,7 @@ class Example extends React.Component {
             <div>
                 <Form onSubmit={this.handleSubmit}>
                 <div  style={{fontFamily:'-apple-system, system-ui, BlinkMacSystemFont',color:'black'}}>
-                    <div className="parallax2">
+                    <div className="parallax2" style={{backgroundImage: 'url("https://s3.amazonaws.com/thinkific-import/114168/jaFn08WvQiWPJycXrtW7_bannr.jpg")'}}>
                         <Upload {...props}>
                           <Button>
                             <Icon type="upload" /> Click to Upload
@@ -179,7 +179,11 @@ class Example extends React.Component {
           )}
         </FormItem>
                 </div>
-                <Button type="primary" htmlType="submit">Publish</Button>
+                <Link to='/admin/dashboard'> 
+                  <Button type="primary">Back</Button>
+                </Link>
+                <Button style={{marginLeft:'10px'}} type="primary" htmlType="submit">Publish</Button>
+
                 <div>
       </div>
             </div>
