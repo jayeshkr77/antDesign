@@ -19,7 +19,7 @@ class App extends Component {
             <Route exact path='/blog/:id' component={BlogPage} />
             <Route exact path='/about' component={About} />
             <Route exact path='/adminpage' component={AdminPage} />
-            <Route exact path='/blogpost' component={Blogging} />
+            {/* <Route exact path='/blogpost' component={Blogging} /> */}
             <Route exact path='/admin' component={WrappedNormalLoginForm} />
             <Route exact path='/admin/dashboard' component={Example} />
           </Switch>

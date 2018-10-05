@@ -110,61 +110,15 @@ class Example extends React.Component {
                 },
               };
             return (
-            // <div>
-            //     <div style={{ marginTop: 10 }}>
-            //         <Button type="primary" onClick={this.logout}>Logout</Button>
-            //     </div>
-            //     <div className="container" style={{ width: '90%', padding: '30px', margin: '100px auto' }}>
-            //         <Form onSubmit={this.handleSubmit}>
-            //             <FormItem row style={{ marginTop: '20px' }}>
-            //                 {
-            //                     getFieldDecorator('title',{
-            //                         rules:[{required:true,message:'Required'}]
-            //                     })(
-            //                         <Input type="text" placeholder="Title" />
-            //                     )
-            //                 }
-
-                            
-                           
-            //             </FormItem>
-            //             <FormItem row>
-            //             {
-            //                     getFieldDecorator('author',{
-            //                         rules:[{required:true,message:'Required'}]
-            //                     })(
-            //                         <Input type="text" placeholder="Author" />
-            //                     )
-            //                 }
-                
-            //             </FormItem>
-            //             <FormItem>
-            //             {
-            //                     getFieldDecorator('content',{
-            //                         rules:[{required:true,message:'Requirecfd'}]
-            //                     })(
-            //                         // <Editor type="text" placeholder={'Write something...'} />
-            //                         <TextArea rows={4} />
-            //                     )
-            //                 }
-            //             </FormItem>
-            //             <FormItem style={{ float: 'right' }}>
-            //                 <Button type="primary" htmlType="submit">Submit</Button>
-            //             </FormItem>
-
-
-            //         </Form>
-            //     </div >
-            // </div>
             <div>
                 <Form onSubmit={this.handleSubmit}>
                 <div  style={{fontFamily:'-apple-system, system-ui, BlinkMacSystemFont',color:'black'}}>
-        <div className="parallax2">
-        <Upload {...props}>
-    <Button>
-      <Icon type="upload" /> Click to Upload
-    </Button>
-  </Upload>
+                    <div className="parallax2">
+                        <Upload {...props}>
+                          <Button>
+                            <Icon type="upload" /> Click to Upload
+                          </Button>
+                        </Upload>
         </div>
         <div className="blogcontent">
             <div className="blog-genre">
@@ -181,17 +135,15 @@ class Example extends React.Component {
       >
         {imageUrl ? <img height='50px' width='50px' src={imageUrl} alt="avatar" /> : uploadButton}
       </Upload>
-                {/* </div> */}
-                <div style = {{position:'absolute',top:-50,left:0,fontSize:'40px',width:'97%',textAlign:'center',color:'white',fontWeight:"bold",textDecoration:'underline'}}>
+        <div style = {{position:'absolute',top:-50,left:0,fontSize:'40px',width:'97%',textAlign:'center',color:'white',fontWeight:"bold",textDecoration:'underline'}}>
                 <FormItem>
           {getFieldDecorator('title', {
             rules: [{ required: true, message: 'Required' }],
           })(
             <Input type='text' style={{width:'30%'}} placeholder="Blog Title" />
           )}
-        </FormItem></div>
-                {/* <div className="shadow"></div> */}
-                {/*this.props.card.genre.map(genre => {<span className="genre" style={gen}>genre</span>}) */}
+        </FormItem>
+        </div>
                 <div  style={{marginTop:'50px'}}>
                 <FormItem>
                 {/* <div style = {{position:'absolute',top:0,left:0,transform:'translate(190px,130px)',}}> */}
